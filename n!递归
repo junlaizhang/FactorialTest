@@ -1,0 +1,22 @@
+package com.junlai.excises;
+
+import java.util.Scanner;
+
+public class FactorialApp1 {
+
+	public static int doSum(int n) {
+		int sum = 0;
+		if (n <= 1) {
+			return 1;
+		} else {
+			return n * doSum(n - 1);
+		}
+	}
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		System.out.println("请输入正整n的值：");
+		int n = input.nextInt();
+		System.out.println("n!值：" + doSum(n));
+	}
+}
